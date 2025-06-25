@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 // import { Geist, Geist_Mono } from "next/font/google"; import fonts here
 import "./globals.css";
-import NavBar from "@/components/NavBar";
+import FloatingNavBar from "./components/FloatingNavBar/FloatingNavBar";
+
+// import NavBar from "@/components/NavBar";
 
 export const metadata: Metadata = {
 	title: "NextJS App Template",
@@ -16,11 +18,8 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body className={`max-w-5xl mx-4 mt-5 lg:mx-auto antialiased`}>
-				<main>
-					<NavBar />
-
-					{children}
-				</main>
+				<FloatingNavBar />
+				<main>{children}</main>
 			</body>
 		</html>
 	);
